@@ -6,10 +6,11 @@ var calculateMonthlyPayment = function (principal, years, rate) {
     return monthlyPayment;
 };
 
-document.getElementById('calcBtn').addEventListener('click', function () {
-    var principal = document.getElementById("principal").value;
-    var years = document.getElementById("years").value;
-    var rate = document.getElementById("rate").value;
-    var monthlyPayment = calculateMonthlyPayment(principal, years, rate);
-    document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
+document.getElementsByClassName('symbol').addEventListener('click', function () {
+  console.log("test");
+    // var principal = document.getElementsByClassName("principal").value;
+    // var years = document.getElementById("years").value;
+    // var rate = document.getElementById("rate").value;
+    // var monthlyPayment = calculateMonthlyPayment(principal, years, rate);
+    // document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
 });

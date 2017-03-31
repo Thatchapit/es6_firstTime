@@ -4,32 +4,54 @@
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Kube CSS -->
+   <link rel="stylesheet" href="assets/css/kube.css">
+   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
-<header>
-    <h1>Mortgage Calculator</h1>
-</header>
-<div class="content">
-    <div class="form">
-        <div>
-            <label>Principal:</label>
-            <input type="text" id="principal" value="200000"/>
+    <div class="wrap">
+      <div class="row align-center row_setting">
+        <div class="col col-2 numberbox"><h1>0</h1></div>
+        <div class="col col-3 inputbox">
+          <h3>Can you input number to calclulate</h3>
+
+            <div class="row gutters">
+                <div class="col col-12">
+                    <div class="form-item">
+                        <label>Number1 <span class="req">*</span></label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="col col-12">
+                    <div class="form-item">
+                        <label>Number2 <span class="req">*</span></label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="col col-4 btnMath">
+
+                          <button class="symbol">PLUS</button>
+
+                </div>
+                <div class="col col-4 btnMath">
+
+                        <button class="symbol">MINUS</button>
+
+                </div>
+                <div class="col col-4 btnMath">
+
+                          <button class="symbol">MUTIPLY</button>
+
+                </div>
+            </div>
+  
         </div>
-        <div>
-            <label>Years:</label>
-            <input type="text" id="years" value="30"/>
-        </div>
-        <div>
-            <label htmlFor="rate">Rate:</label>
-            <input type="text" id="rate" value="5.0"/>
-        </div>
-        <div>
-            <label htmlFor="calcBtn"></label>
-            <button id="calcBtn">Calculate</button>
-        </div>
+      </div>
     </div>
-    <h2>Monthly Payment: <span id="monthlyPayment" class="currency"></span></h2>
-</div>
-<script src="js/main.js"></script>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/js/kube.js"></script>
+    <script src="build/main.bundle.js"></script>
 </body>
 </html>

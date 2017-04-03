@@ -6,11 +6,27 @@ var calculateMonthlyPayment = function (principal, years, rate) {
     return monthlyPayment;
 };
 
-document.getElementsByClassName('symbol').addEventListener('click', function () {
-  console.log("test");
-    // var principal = document.getElementsByClassName("principal").value;
-    // var years = document.getElementById("years").value;
-    // var rate = document.getElementById("rate").value;
-    // var monthlyPayment = calculateMonthlyPayment(principal, years, rate);
-    // document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
-});
+var classname= document.getElementsByClassName("symbol");
+Array.from(classname).forEach(function(element) {
+   element.addEventListener('click', () => {
+     let number1 = document.getElementById('number1').value;
+     let number2 = document.getElementById('number2').value;
+     let symbol = element.getAttribute("symbol");
+
+       document.getElementById("total").innerHTML = calculate(number1,number2,symbol);
+   });
+ });
+
+var calculate = (num1=0,num2=0,symbol="PLUS") => {
+  let valueCalulate = 0;
+
+  if(symbol == "PLUS"){
+    valueCalulate = +num1 + +num2;
+  }else if(symbol == "MINUS"){
+   valueCalulate = num1 - num2;
+  }else{
+      valueCalulate = num1 * num2;
+  }
+
+  return valueCalulate;
+};
